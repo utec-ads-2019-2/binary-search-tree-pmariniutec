@@ -9,15 +9,17 @@ class Iterator;
 
 template <typename T>
 class Node {
-    T data;
-    Node<T> *left;
-    Node<T> *right;
+  T data;
+  Node<T> *left;
+  Node<T> *right;
 
-    template<class>
-    friend class BSTree; 
+  Node(T d) : data(d), left(nullptr), right(nullptr) {}
 
-    template<class>
-    friend class Iterator; 
+  template<class>
+  friend class BSTree; 
+
+  template<class>
+  friend class Iterator; 
 };
 
 #endif
