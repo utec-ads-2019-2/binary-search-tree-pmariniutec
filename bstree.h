@@ -131,6 +131,7 @@ class BSTree {
 	}
 
 	Node<T>* insert(Node<T>* startNode, T data) {
+		// No estás pasando el nodo por referencia, por ende nunca se va a insertar. Cómo probaste el código?
 	  if (startNode == nullptr) {
 		return new Node<T>{data};
 	  }

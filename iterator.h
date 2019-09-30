@@ -28,7 +28,7 @@ class Iterator {
 	  if(this->current == nullptr) {
 		return *this;
 	  }
-
+		// Esto no va a funcionar para un iterador inorder
 	  if((this->current == this->current->left) && (this->current->right != nullptr)) {
 		this->current = this->current->right;
 	  } else {
@@ -46,9 +46,9 @@ class Iterator {
 	  }
 	}
 
-	Iterator<T>& operator--() {
+	/*Iterator<T>& operator--() {
 
-	}
+	}*/
 
 	T operator*() {
 	  if (current == nullptr)
